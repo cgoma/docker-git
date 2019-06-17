@@ -24,7 +24,7 @@ COPY init.sh /usr/local/bin/
 RUN chmod u+x /usr/local/bin/init.sh
 
 # Copy code (this assumes the ./src folder contains the code using the SDK and that the entrypoint is app.py)
-COPY demoApp.py /code
+COPY azure_cloud_api.py /code
 
 EXPOSE 8000 2222
-CMD ["python3", "-u", "/code/demoApp.py"]
+CMD ["python3", "-u", "/code/azure_cloud_api.py"]
